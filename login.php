@@ -32,24 +32,26 @@ if ( isset($_POST["login"]) ) {
 	// cek username 
 	if(mysqli_num_rows($result) == 1){	
 		// cek password
-		$rows = mysqli_fetch_assoc($result);
-		if (password_verify($password, $rows["password"])) {
-			//set session
-			$_SESSION["login"] = true;
+		// $rows = mysqli_fetch_assoc($result);
+		// if (password_verify($password, $rows["password"])) {
+		// 	//set session
+		// 	$_SESSION["login"] = true;
 			
-			//cek rememer
-			if(isset($_POST['remember'])) {
-				//set cookie
-				setcookie('id', $rows['id'], time()+60);
-				setcookie('key', hash('sha256', $rows['username']), time()+60);
-			}
+		// 	//cek rememer
+		// 	if(isset($_POST['remember'])) {
+		// 		//set cookie
+		// 		setcookie('id', $rows['id'], time()+60);
+		// 		setcookie('key', hash('sha256', $rows['username']), time()+60);
+		// 	}
 			
-			header("Location: index.php");
-			exit;
-		}
+		// 	header("Location: index.php");
+		// 	exit;
+		// }
+
+		$error = true;
 	}
+
 	
-	$error = true;
 }
 ?>
 <html>
