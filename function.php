@@ -1,16 +1,15 @@
 <?php
 
-	//koneksi db
-	$con = mysqli_connect("119.235.255.105","root","Saisai2019","dbmagang");
-	function query($query) {
-		global $con;
-		$result = mysqli_query($con, $query);
-		$rows = [];
-		while( $row = mysqli_fetch_assoc($result) ) {
-			$rows[] = $row;
-		}
-		return $rows;
+$con = mysqli_connect("119.235.255.105","root","Saisai2019","dbmagang");
+function query($query) {
+	global $con;
+	$result = mysqli_query($con, $query);
+	$rows = [];
+	while( $row = mysqli_fetch_assoc($result) ) {
+		$rows[] = $row;
 	}
+	return $rows;
+}
 	
 	function hitung($hitung) {
 		global $con;
