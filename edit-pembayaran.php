@@ -27,14 +27,14 @@ if ( isset($_POST["submit"]) ) {
 		echo "
 			<script>
 				alert('Ciee berhasil');
-				document.location.href = 'pembayaran.php';
+				document.location.href = 'data-pembayaran.php';
 			</script>
 			";
 	} else {
 		echo "
 			<script>
 				alert('Waduu gagal gan');
-				document.location.href = 'pembayaran.php';
+				document.location.href = 'data-pembayaran.php';
 			</script>
 			";
 	}
