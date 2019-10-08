@@ -17,10 +17,10 @@ if( isset($_COOKIE['id']) && isset($_COOKIE['key']) ) {
 	}
 }
 
-if(isset($_SESSION["login"])) {
-	header("Location: index.php");
-	exit;
-}
+// if(isset($_SESSION["login"])) {
+// 	header("Location: index.php");
+// 	exit;
+// }
 
 // cek tombol login sudah ditekan atau belum
 if ( isset($_POST["login"]) ) {	
