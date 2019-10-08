@@ -80,13 +80,13 @@ if ( isset($_POST["submit"]) ) {
 						<div class="form-group row">
 							<label for="nim" class="col-sm-2 col-form-label">NIM</label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control" id="nim" name="nim" value="<?= $sis["nim"]?>">
+								<input type="text" class="form-control" id="nim" name="nim" value="<?= $siswa["nim"]?>">
 							</div>
 						</div>
 						<div class="form-group row">
 							<label for="nama" class="col-sm-2 col-form-label">Nama</label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control" id="nama" name="nama" value="<?= $sis["nama"] ?>">
+								<input type="text" class="form-control" id="nama" name="nama" value="<?= $siswa["nama"] ?>">
 							</div>
 						</div>
 						<div class="form-group row">
