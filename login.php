@@ -17,10 +17,10 @@ if( isset($_COOKIE['id']) && isset($_COOKIE['key']) ) {
 	}
 }
 
-// if(isset($_SESSION["login"])) {
-// 	header("Location: index.php");
-// 	exit;
-// }
+if(isset($_SESSION["login"])) {
+	header("Location: index.php");
+	exit;
+}
 
 // cek tombol login sudah ditekan atau belum
 if ( isset($_POST["login"]) ) {	
@@ -31,22 +31,22 @@ if ( isset($_POST["login"]) ) {
 	$result = mysqli_query($con, "SELECT * FROM dev_admin WHERE username = '$username'");
 	// cek username 
 	if(mysqli_num_rows($result) == 1){	
-		// cek password
-		// $rows = mysqli_fetch_assoc($result);
-		// if (password_verify($password, $rows["password"])) {
-		// 	//set session
-		// 	$_SESSION["login"] = true;
+		cek password
+		$rows = mysqli_fetch_assoc($result);
+		if (password_verify($password, $rows["password"])) {
+			//set session
+			$_SESSION["login"] = true;
 			
-		// 	//cek rememer
-		// 	if(isset($_POST['remember'])) {
-		// 		//set cookie
-		// 		setcookie('id', $rows['id'], time()+60);
-		// 		setcookie('key', hash('sha256', $rows['username']), time()+60);
-		// 	}
+			//cek rememer
+			if(isset($_POST['remember'])) {
+				//set cookie
+				setcookie('id', $rows['id'], time()+60);
+				setcookie('key', hash('sha256', $rows['username']), time()+60);
+			}
 			
-		// 	header("Location: index.php");
-		// 	exit;
-		// }
+			header("Location: index.php");
+			exit;
+		}
 
 		$error = true;
 	}

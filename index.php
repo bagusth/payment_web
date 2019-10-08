@@ -1,13 +1,13 @@
 <?php
-// session_start();
+session_start();
 
-// if(!isset($_SESSION["login"])) {
-// 	header("Location: login.php");
-// 	exit;
-// }
+if(!isset($_SESSION["login"])) {
+	header("Location: login.php");
+	exit;
+}
 
 require 'function.php';
-// $sis = hitung("SELECT * FROM dev_siswa");
+// $siswa = hitung("SELECT * FROM dev_siswa");
 $tagihan = hitung("SELECT * FROM dev_tagihan_m");
 $pembayaran = hitung("SELECT * FROM dev_bayar_m");
 $siswa = hitung("SELECT * FROM dev_siswa");
