@@ -80,9 +80,9 @@ if ( isset($_POST["bayar"]) ) {
 			<div class="bg-dark border-right" id="sidebar-wrapper">
 					<div class="list-group list-group-flush">
 						<a href="index.php" class="list-group-item list-group-item-action bg-dark text-light">Dashboard</a>
-						<a href="siswa.php" class="list-group-item list-group-item-action bg-dark text-light">Data Siswa</a>
-						<a href="tagihan.php" class="list-group-item list-group-item-action bg-dark text-light">Data Tagihan</a>
-						<a href="pembayaran.php" class="list-group-item list-group-item-action bg-dark text-light">Data Pembayaran</a>
+						<a href="data-siswa.php" class="list-group-item list-group-item-action bg-dark text-light">Data Siswa</a>
+						<a href="data-tagihan.php" class="list-group-item list-group-item-action bg-dark text-light">Data Tagihan</a>
+						<a href="data-pembayaran.php" class="list-group-item list-group-item-action bg-dark text-light">Data Pembayaran</a>
 					</div>
 			</div>
 			<!-- /#sidebar-wrapper -->
